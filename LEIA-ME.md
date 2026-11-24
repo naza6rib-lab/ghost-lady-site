@@ -14,10 +14,11 @@ Abre http://localhost:5173 (só precisa do Node, sem `npm install`).
   põe-nas em `ghost-lady/manus-storage/` com o mesmo nome (ex.: `ghost-castle-moon_dff7242b.jpg`).
 
 ## Online no Render (grátis)
-1. Em https://render.com entra com a conta do GitHub.
-2. **New → Blueprint** e escolhe o repositório `ghost-lady-site`. O Render lê o `render.yaml` e cria o serviço.
-3. Quando pedir as variáveis, podes deixar as do Upstash e do Spotify em branco por agora.
-4. O site fica em `https://ghost-lady-XXXX.onrender.com`. Sempre que enviares alterações para o GitHub, o Render atualiza sozinho.
+O site está em **https://ghost-lady.onrender.com** (painel: dashboard.render.com → ghost-lady).
+
+Para publicar alterações: envia-as para o GitHub (`git push`) e, no Render, carrega em
+**Manual Deploy → Deploy latest commit**. Para ser automático, liga a conta do GitHub ao Render
+(Account Settings → Git) e ativa o Auto-Deploy no serviço.
 
 O plano grátis adormece o servidor depois de 15 min sem visitas (a primeira visita seguinte demora ~1 minuto)
 e **apaga a pasta `data/` em cada reinício**. Para não perderes os desenhos e o contador, usa o Upstash:
