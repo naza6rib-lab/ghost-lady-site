@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: ghost-lady
+    runtime: node
+    plan: free
+    buildCommand: echo "sem build"
+    startCommand: node server.mjs
+    healthCheckPath: /
+    envVars:
+      - key: ADMIN_KEY
+        generateValue: true
+      - key: UPSTASH_REDIS_REST_URL
+        sync: false
+      - key: UPSTASH_REDIS_REST_TOKEN
+        sync: false
+      - key: SPOTIFY_CLIENT_ID
+        sync: false
+      - key: SPOTIFY_CLIENT_SECRET
+        sync: false
